@@ -1,0 +1,4 @@
+name: SimplePlugin
+version: 1.0
+main: br.com.piqque.simpleplugin.Main
+author: Piqque
