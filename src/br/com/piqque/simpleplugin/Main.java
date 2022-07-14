@@ -10,6 +10,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 	
 	@Override
+	public void onLoad()
+	{
+		Bukkit.getConsoleSender().sendMessage("§aCarregando o servidor.");
+	}
+	
+	@Override
 	public void onEnable()
 	{
 		Bukkit.getConsoleSender().sendMessage("§eLigando o servidor.");
@@ -21,5 +27,4 @@ public class Main extends JavaPlugin {
 	{
 		Bukkit.getConsoleSender().sendMessage("§cDesligando o servidor.");
 	}
-
 }

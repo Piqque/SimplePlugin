@@ -18,7 +18,7 @@ public class MainListeners implements Listener {
 	@EventHandler
 	public void asyncPlayerPreLoginEvent(AsyncPlayerPreLoginEvent asyncPlayerPreLoginEvent) throws InterruptedException
 	{
-		Bukkit.getConsoleSender().sendMessage("§e[+ 1] §f" + asyncPlayerPreLoginEvent.getName() + "§f]");
+		Bukkit.getConsoleSender().sendMessage("§8[§a+1§8] §e" + asyncPlayerPreLoginEvent.getEventName());
 		wait(250);
 	}
 	
@@ -53,9 +53,11 @@ public class MainListeners implements Listener {
 	}
 	
 	@EventHandler
-	public void playerJoinEvent(PlayerQuitEvent playerQuitEvent)
+	public void playerQuitEvent(PlayerQuitEvent playerQuitEvent)
 	{
 		playerQuitEvent.setQuitMessage(null);
+		
+		Bukkit.getConsoleSender().sendMessage("§8[§c-1§8] §e" + playerQuitEvent.getEventName());
 		
 		Player player = playerQuitEvent.getPlayer();
 		for (Player players : Bukkit.getOnlinePlayers())
