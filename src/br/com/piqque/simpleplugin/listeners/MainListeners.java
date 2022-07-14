@@ -53,7 +53,7 @@ public class MainListeners implements Listener {
 	}
 	
 	@EventHandler
-	public void playerJoinEvent(PlayerQuitEvent playerQuitEvent)
+	public void playerQuitEvent(PlayerQuitEvent playerQuitEvent)
 	{
 		playerQuitEvent.setQuitMessage(null);
 		
